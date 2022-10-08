@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arcane</title>
+    <link href="../Stylesheets/destinationcss.css" rel="stylesheet">
+
+</head>
+<body id="bod" onload="white()">
+<div class="fond"></div>
+<div class="menu" onmouseover="yo()"  id="men">
+    <img src="../Ressources/logo.png">
+    <a id="pp" href="../index.html"><p>Accueil</p></a>
+    <a id="pa" href="../Nosdestinations.html"><p>Nos Destinations</p></a>
+    <a id="pb" href="../nouscontacter.html"><p>Nous contacter</p></a>
+    <a id="pe" href="../Reservation.html"><p>Réservation</p></a>
+</div>
+<div class="principal" id="jojo">
+</div>
+<div class="element">
+    <div class="destitle"><p>ARCANE</p></div>
+    <div class="imgdest" onmouseover="bandeautrue()" onmouseout="bandeaufalse()">
+        <img id="imag" src="../Ressources/Arcane1.png">
+        <div class="basimg" id="basimg">
+            <a class="left" id="left" onclick="prev()" onmouseover="overleft()" onmouseout="outleft()"><img id="btprec" class="boutprec" src="../Ressources/fleche.png"></a>
+            <a class="middleLeft" id="right" onclick="next()" onmouseover="overright()" onmouseout="outright()"><img id="btsuiv" class="boutsuiv" src="../Ressources/fleche.png"></a>
+        </div>
+    </div>
+
+    <p>
+        Vous avez aimé la série d’animation Arcane ? Vous allez adorer découvrir son univers de vos propres yeux en parcourant Zaun et Piltover.
+        A vous les joies de l’Hextech, la science et la magie cohabitant au sein d’un même univers.
+        Partez à la rencontre de tous vos personnages favoris et évoluez dans un monde poétique et sombre, où le danger attend à chaque croisement et la guerre est a portée de bras.
+    </p>
+
+    <div class="comp">
+        <h1>Informations complémentaires</h1>
+        <p>-Logement et vivres non-inclus
+        <br>-Notre société nie toute responsabilité en cas de décès, blessure grave ou traumatisme physique/psychologique
+        <br>-Pour toute question contacter le 1234567890 -<i> Appel non-surtaxé</i></p>
+    </div>
+
+</div>
+<div class="pass" id="pass">
+    <form action="../Reservation.html?num=1" method=POST onmouseover="reseover()" onmouseout="reseout()">
+        <input type="submit">
+    </form>
+    <p id="ppass">Je réserve </p><img class="passimg" id="passimage" src="../Ressources/Fleche2.png">
+</div>
+<div class="btn" id="btn">
+    <a onfocus="white()" href=# class="b2">White Theme</a>
+    <a onfocus="dark()" href=# class="b1">Dark Theme</a>
+</div>
+<footer class="foot" id="foote">
+    <div class="reseaux">
+        <img onclick="lien(1)" src="../Ressources/facebook.png">
+        <img onclick="lien(2)" src="../Ressources/twitter.png">
+        <img onclick="lien(3)" src="../Ressources/linkedin.png">
+        <img onclick="lien(4)" src="../Ressources/instagram.png">
+        <img onclick="lien(5)" src="../Ressources/behance.png">
+    </div>
+    <div class="mentions">Tous droits réservés ©Agence Web, Rennes | 2021 / 2022 | François DAVID - Pier CHAPON - Bazile BIDET</div>
+</footer>
+<script src="../Js/script.js"></script>
+<script>
+    var nbImg = 3;
+    var images = ["../Ressources/Arcane1.png", "https://pbs.twimg.com/media/E_0tOkEVQAM3ZhG?format=jpg&name=4096x4096", "https://images.hdqwalls.com/wallpapers/jinx-and-vi-league-of-legends-in-arcane-4k-i7.jpg"];
+</script>
+</body>
+</html>

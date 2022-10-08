@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+body{
+    align-items: center;
+    margin:0;
+    padding:0;
+    top: 0;
+    position: absolute;
+    height: 120%;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: darkgrey;
+    background-size: 100%;
+}
+
+.menu{
+
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    width: 90%;
+    height: 8%;
+    max-height: 110px;
+    background-color: #87cefa;
+    border-radius: 10px;
+}
+.fond{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 25%;
+    width: 100%;
+    max-height: 270px;
+    background: linear-gradient(black, rgba(0,0,0,0.0));
+}
+.element{
+    position: relative;
+    margin-top: 6%;
+    left: 2.5%;
+    min-height: 500px;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.menu img{
+    max-height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.menu a{
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    opacity: 100%;
+    text-decoration: none;
+    max-height: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    height: 60%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+.menu p{
+    font-size: large;
+    position: relative;
+    line-height: 40%;
+    display: grid;
+    text-align: center;
+}
+.menu a:hover{
+    position: relative;
+    text-align: center;
+    max-height: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+    height: 55%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+@media screen and (max-width: 97em) {
+    body{
+        height: 130%;
+    }
+    .imgdest{
+        width: 30% !important;
+        height: 20% !important;
+    }
+    .destitle{
+        font-size: 2.5rem!important;
+    }
+    .element>p{
+        font-size: 1rem!important;
+    }
+    h1{
+        position: absolute;
+        font-size: 2rem!important;
+        top: -3rem !important;
+    }
+    .comp>p{
+        font-size: 1rem !important;
+        padding-top: 2% !important;
+    }
+    .pass{
+        left: 12.5% !important;
+    }
+}
+@media screen and (max-width: 64em) {
+    .gauche{
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        flex-shrink: 0;
+        margin-left: 15%;
+    }
+    .menu{
+        height: 10%;
+        margin-bottom: 10%;
+    }
+
+    .fond{
+        height: 10%;
+    }
+    .imgdest {
+        position: relative;
+        margin-top: 1%;
+        left: 5% !important;
+        width: 20rem !important;
+        height: 13rem !important;
+    }
+    .destitle{
+
+        left: 3% !important;
+    }
+
+}
+
+@media screen and (max-width: 50em) {
+    .pass{
+        margin-left: -2rem;
+    }
+    .menu p{
+        margin-top: 10%;
+        font-size: 80%;
+        line-height: normal;
+    }
+    .menu a{
+        height: 80%;
+    }
+    .destitle{
+        top: 3rem !important;
+    }
+    .imgdest{
+        top: 3rem;
+        left: 3% !important;
+    }
+    .element>p{
+        left: 60% !important;
+        width: 30% !important;
+    }
+    .left{
+        left: 2% !important;
+    }
+    .middleLeft{
+        left: 10%!important;
+    }
+    .comp{
+        margin-left: -7% !important;
+        top: 4rem;
+    }
+    body{
+        height: 100% !important;
+    }
+}
+
+@media screen and (max-width: 30em){
+    .element{
+        top: 10%;
+    }
+    .destitle>p{
+        font-size: 50%;
+    }
+    .imgdest {
+        position: relative;
+        margin-top: 1%;
+        left: 1% !important;
+        width: 10rem !important;
+        height: 8rem !important;
+    }
+    body{
+        overflow-x: auto;
+    }
+    .comp{
+        top: 10rem;
+    }
+    .pass{
+        top: 6rem;
+    }
+}
+.btn{
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    text-decoration: none;
+    background-color: antiquewhite;
+    padding: 0.2%;
+    border-radius: 5px;
+    z-index: 99;
+}
+.b1{
+    background-color: rgba(0, 139, 139, 0.36);
+}
+.b2{
+    background-color: rgba(250, 235, 215,0.75);
+}
+.foot{
+    max-height:150px;
+    margin-top: 100%;
+    background-color: rgba(30, 30, 30, 0.36);
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+}
+.reseaux{
+    height: 10%;
+    padding-left: 1%;
+    width: 20%;
+}
+.reseaux>img{
+    padding-top: 6%;
+    padding-left: 5%;
+    height: 25px;
+    width: 25px;
+}
+.mentions{
+    position: relative;
+    bottom: -80%;
+    display: grid;
+    text-align: center;
+    font-size: 10px;
+}
+h1{
+    font-size: 2.5rem;
+    font-family: Oswald;
+    color: #32557f;
+}
+
+body{
+    width: 100%;
+}
+.destitle{
+    position: relative;
+    width: fit-content;
+    top: 2%;
+    left: 10%;
+    font-size: 3rem;
+    font-family: 'Oswald';
+    padding-bottom: 0;
+    letter-spacing: 1px;}
+.destitle {
+    animation: progress-bar 1000ms;
+}
+.destitle>p {
+    margin-bottom: 0;
+}
+.destitle {
+    color: #32557f;
+    z-index: 10;
+    text-decoration: none;
+    background:  no-repeat 0 100%;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    transition: background-size .3s ease;
+}
+.destitle:hover, .destitle:focus {
+    background-size: 100% 2px;
+}
+@keyframes progress-bar{
+    0% {
+        transform: scaleX(0);
+        opacity: .1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+.imgdest{
+    position: relative;
+    margin-top: 1%;
+    left: 10%;
+    width: 35rem;
+    height: 22rem;
+    overflow: hidden;
+}
+#imag{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.element>p{
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    font-size: 1.1rem;
+    max-width: 45%;
+    word-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 40%;
+}
+.basimg{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.66),white);
+    border-radius: 10px;
+    top: 75%;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    opacity: 0;
+}
+.left{
+    left: 2%;
+    bottom: 10%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    border-style: solid;
+    border-radius: 50%;
+    color: #7a7a7a;
+    border-width: 0.15rem;
+    opacity: 0;
+}
+.middleLeft{
+    bottom: 10%;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 90%;
+    border-style: solid;
+    border-radius: 50%;
+    color: #7a7a7a;
+    border-width: 0.15rem;
+    opacity: 0;
+}
+.left:hover, .middleLeft:hover{
+    cursor: pointer;
+}
+.comp{
+    margin-top: 2%;
+    position: relative;
+    left: 10%;
+}
+.left:hover, .middleLeft:hover{
+    background-color: #b0b0b0;
+    transition-duration:0.2s;
+}
+.boutprec{
+    transition-duration:0.2s;
+    position: absolute;
+    height: 1rem;
+    transform: rotate(180deg) translate(50%,50%);
+    width: 1rem;
+    left: 50%;
+    top: 50%;
+}
+.boutsuiv{
+    transition-duration:0.2s;
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);;
+}
+.pass{
+    position: relative;
+    left: 15rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    background-color: #32557f;
+    opacity: 0.6;
+    width: 13rem;
+}
+#ppass{
+    font-family: Oswald;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.passimg{
+    transform: rotate(90deg) translatex(-50%);
+    top: 1.25rem;
+    position: absolute;
+    height: 3.5rem;
+    left: 55%;
+    animation: droite 1500ms infinite ease-in-out;
+}
+form, input{
+    position: absolute;
+    height: 2.5rem;
+    width: 13rem;
+    opacity: 0;
+    z-index: 999;
+}
+form:hover, input:hover{
+    cursor: pointer;
+}
+@keyframes droite{
+    0% {
+        left: 55%;
+    }
+    50%{
+        left: 65%;
+    }
+    100% {
+        left: 55%;
+    }
+}

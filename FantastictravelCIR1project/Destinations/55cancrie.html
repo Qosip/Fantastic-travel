@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>55 Cancrie-E</title>
+    <link href="../Stylesheets/destinationcss.css" rel="stylesheet">
+
+</head>
+<body id="bod" onload="white()">
+<div class="fond"></div>
+<div class="menu" onmouseover="yo()"  id="men">
+    <img src="../Ressources/logo.png">
+    <a id="pp" href="../index.html"><p>Accueil</p></a>
+    <a id="pa" href="../Nosdestinations.html"><p>Nos Destinations</p></a>
+    <a id="pb" href="../nouscontacter.html"><p>Nous contacter</p></a>
+    <a id="pe" href="../Reservation.html"><p>Réservation</p></a>
+</div>
+<div class="principal" id="jojo">
+</div>
+<div class="element">
+    <div class="destitle"><p>55 CANCRI-E</p></div>
+    <div class="imgdest" onmouseover="bandeautrue()" onmouseout="bandeaufalse()">
+        <img id="imag" src="../Ressources/55Cancrie1.jpeg">
+        <div class="basimg" id="basimg">
+            <a class="left" id="left" onclick="prev()" onmouseover="overleft()" onmouseout="outleft()"><img id="btprec" class="boutprec" src="../Ressources/fleche.png"></a>
+            <a class="middleLeft" id="right" onclick="next()" onmouseover="overright()" onmouseout="outright()"><img id="btsuiv" class="boutsuiv" src="../Ressources/fleche.png"></a>
+        </div>
+    </div>
+
+    <p>
+        Découvrez 55 Cancri-E, cette planète au climat extrême située a des années lumières de notre planète.
+        Faites l'expérience de ses pas moins de 2500 °C et sa composition intégralement minérale et tentez d'exploiter toutes les richesses que cette planète a à offrir durant un stage survie de quelques semaines.
+        Embarquez dans notre navette spatiale pour un voyage de quelques dizaines d'années lumière et découvrez les joies du voyage dans l'espace.
+        55 Cancri-E est une planète intégralement constituée de minéraux dont un tiers de diamants, n'attendez plus et atteignez la richesse en seulement quelques jours.
+        Venez tester vos capacités de survie dans un environnement extrême sans eau ni nourriture.
+        Explorez les merveilleux paysages minéraux que cette planète a à offrir.
+    </p>
+
+    <div class="comp">
+        <h1>Informations complémentaires</h1>
+        <p>-Logement et vivres non-inclus
+        <br>-Notre société nie toute responsabilité en cas de décès, blessure grave ou traumatisme physique/psychologique
+        <br>-Pour toute question contacter le 1234567890 -<i> Appel non-surtaxé</i></p>
+    </div>
+
+</div>
+<div class="pass" id="pass">
+    <form action="../Reservation.html?num=0" method=POST onmouseover="reseover()" onmouseout="reseout()">
+        <input type="submit">
+    </form>
+    <p id="ppass">Je réserve </p><img class="passimg" id="passimage" src="../Ressources/Fleche2.png">
+</div>
+<div class="btn" id="btn">
+    <a onfocus="white()" href=# class="b2">White Theme</a>
+    <a onfocus="dark()" href=# class="b1">Dark Theme</a>
+</div>
+<footer class="foot" id="foote">
+    <div class="reseaux">
+        <img onclick="lien(1)" src="../Ressources/facebook.png">
+        <img onclick="lien(2)" src="../Ressources/twitter.png">
+        <img onclick="lien(3)" src="../Ressources/linkedin.png">
+        <img onclick="lien(4)" src="../Ressources/instagram.png">
+        <img onclick="lien(5)" src="../Ressources/behance.png">
+    </div>
+    <div class="mentions">Tous droits réservés ©Agence Web, Rennes | 2021 / 2022 | François DAVID - Pier CHAPON - Bazile BIDET</div>
+</footer>
+<script src="../Js/script.js"></script>
+<script>
+    var nbImg = 3;
+    var images = ["../Ressources/55Cancrie1.jpeg", "../Ressources/55Cancrie2.jpg", "../Ressources/55cancrie3.jpg"];
+</script>
+</body>
+</html>

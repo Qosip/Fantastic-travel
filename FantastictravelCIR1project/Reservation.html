@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation</title>
+    <link href="Stylesheets/Reservation.css" rel="stylesheet">
+</head>
+<body id="bod" onload="white(); f1(); passage()">
+<div class="fond"></div>
+<div class="menu" onmouseover="yo()" id="men">
+    <img src="Ressources/logo.png">
+    <a id="pp" href="index.html"><p>Accueil</p></a>
+    <a id="pa" href="Nosdestinations.html"><p>Nos Destinations</p></a>
+    <a id="pb" href="nouscontacter.html"><p>Nous contacter</p></a>
+    <a id="pe" href="Reservation.html" style="background-color: #d2bea4"><p>Réservation</p></a>
+</div>
+<div id="titlepage">Réservation</div>
+<div class="element" id="el">
+    <div class="page" id="page1" style="display: none">
+        <p class="nompage">Prévisualisation de la destination : </p>
+        <div class="choix">
+            <select onchange="change_valeur()" id="ch">
+                <option value="0">55 Cancri-E</option>
+                <option value="1">Arcane</option>
+                <option value="2">Asgard</option>
+                <option value="3">Darvaza</option>
+                <option value="4">Etoile noire</option>
+                <option value="5">Kame House</option>
+                <option value="6">One piece</option>
+                <option value="7">Pandora</option>
+                <option value="8">Terre du Milieu</option>
+            </select>
+        </div>
+        <div class="previewdest">
+            <img src="https://wavypack.com/wp-content/uploads/2022/05/planet9.jpeg" id="idest">
+        </div>
+        <div class="barre"></div>
+        <p class="nompage2">Dates : </p>
+        <div class="dates">
+            <div class="datearr">
+                <p>Date aller :
+                <input type="date" id="date_a" required></p>
+            </div>
+            <div class="dateret">
+                <p>Date retour :
+                <input type="date" id="date_r" required></p>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="page2" style="display: none">
+        <p class="nompage">Informations personelles :</p>
+        <div class="personne">
+            <p>Nom :
+            <input id="nom" type="text" placeholder="Nom" required></p>
+            <p>Prénom :
+            <input id="prenom" type="text" placeholder="Prénom" required></p>
+            <p>Mail :
+            <input id="mail" type="email" placeholder="monemail@boitemail.com" required></p>
+            <p>Téléphone :
+            <input id="tele" type="number" pattern="[0-9]{10}"required placeholder="0123456789" required></p>
+        </div>
+        <div class="barre"></div>
+        <p class="nompage2">Carte : </p>
+        <div class="carte">
+            <p>Nous faisons un prélèvement de 10253€ pour valider la réservation</p>
+            <div class="info">Numéro de la carte : <input id="Num" type="number" placeholder="0123456789123456" required></div>
+            <div class="info">Denteur de la carte : <input id="deten" type="text" placeholder="Prénom Nom" required></div>
+            <div class="info">Date d'expiration : <input id="exp" type="date" placeholder="01/01/2022" required></div>
+            <div class="info">CVV : <input id="CVV" type="number" placeholder="123" required></div>
+        </div>
+    </div>
+    <div class="page" id="page3" style="display: none">
+        <p class="nompage">Information complémentaires : <i style="font-size: 1rem">(Facultatif)</i></p>
+        <div class="infocomp">
+            <div class="infosujet">
+                <p>Sujet</p>
+                <input type="text" id="sujet" placeholder="Sujet">
+            </div>
+            <div class="infotext">
+                <p>Message</p>
+                <textarea id="msg" placeholder="Ecrivez ici votre demande"></textarea>
+            </div>
+        </div>
+        <div class="barre"></div>
+        <p class="nompage2">Validation : </p>
+        <div class="envoyer">
+            <input type="button" value="Valider" onclick="verification();recapi()">
+        </div>
+        <div class="fus">
+            <img id="fusee" src="Ressources/fusee.png.crdownload"/>
+            <img id="smoke" src="Ressources/smoke.webp" />
+            <p id="bal">ZZZEEEEE PARTTTTIII</p>
+            <p id="balo">Merci de votre confiance</p>
+        </div>
+    </div>
+    <div class="page" id="page4" style="display: none">
+        <p class="nompage" id="nomdern">Récapitulatif <button id="btreset" onclick="document.location.reload(true)">Annuler la réservation</button></p>
+        <div class="recap">
+            <div class="lieux"><div class="re" id="r_lieu" style="font-weight: bolder">Destination : <p id="r_destnom" style="font-weight: normal"></p></div>
+                <img id="r_img" src="Ressources/55Cancrie1.jpeg">
+            </div>
+            <div class="barre2"></div>
+            <div class="dat"><h5 class="re">Dates : </h5>
+                <p class="justa">Date Aller : <p id="r_datea" class="justb"></p></p>
+                <p class="justa">Date Retour : </p><p id="r_dater" class="justc"></p>
+            </div>
+            <div class="infp"><h5 class="re">Informations personelles : </h5>
+                <p class="justa">Nom : </p><p id="r_nom" class="justd"></p>
+                <p class="justa">Prénom : </p><p id="r_prenom" class="juste"></p>
+                <p class="justa">Mail : </p><p id="r_mail" class="justf"></p>
+                <p class="justa">Téléphone : <p id="r_tel" class="justg"></p></p>
+            </div>
+            <div class="infc"><h5 class="re">Carte : </h5>
+                <p class="justa">Numéro de carte : </p><p id="r_num" class="justh"></p>
+                <p class="justa">Détenteur de la carte : </p><p id="r_deten" class="justi"></p>
+                <p class="justa">Date d'expiration : </p><p id="r_exp" class="justj"></p>
+                <p class="justa">CVV : <p id="r_CVV" class="justk"></p></p>
+            </div>
+            <div class="msgsupl"><h5 class="re">Information complémentaires : </h5>
+                <p class="justa">Sujet : <p id="r_sujet" class="justl"></p></p>
+                <p class="justa">Message : <p id="r_msg" class="justm"></p></p>
+            </div>
+            <div class="msgfin">Merci d'avoir réservé chez nous, nous vous souhaitons un merveilleux séjour à :<p id="msgf"></p> </div>
+        </div>
+    </div>
+    <div class="msgerr" id="err">
+        <p class="infgreen" id="acces">Demande Envoyée ! Vous pouvez désormais accéder au récapitulatif en cliquant sur le bouton de droite</p>
+        <p id="terr">Eléments à compléter :</p>
+        <pre class="inferr" id="infoerror"></pre>
+        <a class="cross" onclick="dissip()">
+            <img class="imgcross" src="Ressources/croix.png">
+        </a>
+    </div>
+    <a class="lienbout" href="#">
+    <div class="boutprec" id="btprec" onclick="precedent()">
+        <img src="Ressources/fleche.png">
+    </div></a>
+    <a class="lienbout" href="#">
+    <div class="boutsuiv" id="btsuiv" onclick="suivant()">
+        <img src="Ressources/fleche.png">
+    </div></a>
+    <div class="cachebouton"></div>
+    <form class="radiobut" id="rad">
+        <input id="rad1" type="radio" name="1" value="10" onclick="f1()" checked>
+        <input id="rad2" type="radio" name="1" value="11" onclick="f2()">
+        <input id="rad3" type="radio" name="1" value="12" onclick="f3()">
+        <input id="rad4" type="radio" name="1" value="13" onclick="f4()">
+    </form>
+</div>
+
+<div class="btn" id="btn">
+    <a onfocus="white()" href=# class="b2">White Theme</a>
+    <a onfocus="dark()" href=# class="b1">Dark Theme</a>
+</div>
+<footer class="foot" id="foote">
+    <div class="reseaux">
+        <img onclick="lien(1)" src="Ressources/facebook.png">
+        <img onclick="lien(2)" src="Ressources/twitter.png">
+        <img onclick="lien(3)" src="Ressources/linkedin.png">
+        <img onclick="lien(4)" src="Ressources/instagram.png">
+        <img onclick="lien(5)" src="Ressources/behance.png">
+    </div>
+    <div class="mentions">Tous droits réservés ©Agence Web, Rennes | 2021 / 2022 | François DAVID - Pier CHAPON - Bazile BIDET</div>
+</footer>
+<script src="Js/Reservation.js"></script>
+</body>
+</html>

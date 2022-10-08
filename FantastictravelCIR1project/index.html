@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" id="tout">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel</title>
+    <link href="Stylesheets/style.css" rel="stylesheet">
+
+</head>
+<body id="bod" onload="white()">
+<div class="fond"></div>
+<div class="menu" onmouseover="yo()"  id="men">
+    <img src="Ressources/logo.png">
+    <a id="pp" href="index.html" style="background-color: #d2bea4"><p>Accueil</p></a>
+    <a id="pa" href="Nosdestinations.html"><p>Nos Destinations</p></a>
+    <a id="pb" href="nouscontacter.html"><p>Nous contacter</p></a>
+    <a id="pe" href="Reservation.html"><p>Réservation</p></a>
+</div>
+<div class="principal" id="jojo">
+</div>
+<div id="titlepage">Destinations populaires</div>
+<div class="element" id="gau">
+    <div class="l1" id="ligne1">
+        <div class="gauche" id="as" onmouseover="asa()" onmouseout="asao()" onclick="transi()">
+            <a href="Destinations/Pandora.html"><div id="des1">PANDORA</div><img src="Ressources/Pandora1.jpg" width="100%" style="opacity: 1; z-index: 2"> <img class="deuximg" id="asi" src="Ressources/fondnoir.png" width="100%" style="opacity: 0.6; z-index: 3; position: absolute; top: 0; left: 0"></a></div>
+        <div class="gauche" id="bs" onmouseover="bsa()" onmouseout="bsao()" onclick="transi()">
+            <a href="Destinations/Terredumilieu.html"><div id="des2">LA TERRE DU MILIEU</div><img src="Ressources/rivendell.jpg" width="100%" style="opacity: 1; z-index: 2"> <img class="deuximg"  id="bsi" src="Ressources/fondnoir.png" width="100%" style="opacity: 0.6; z-index: 3; position: absolute; top: 0; left: 0"></a></div>
+        <div class="gauche" id="cs" onmouseover="csa()" onmouseout="csao()" onclick="transi()">
+            <a href="Destinations/Etoilenoire.html"><div id="des3">L'ETOILE NOIRE</div><img src="Ressources/Etoilenoire1.jpg" width="100%" style="opacity: 1; z-index: 2"> <img class="deuximg" id="csi" src="Ressources/fondnoir.png" width="100%" style="opacity: 0.6; z-index: 3; position: absolute; top: 0; left: 0"></a></div>
+    </div>
+
+</div>
+<div class="pres">
+    <p class="secondtitre">Présentation</p>
+    <p class="prestext">
+    Vous avez toujours rêvé de partir en excursion dans des terres inconnues, empreintes de fantaisie ?
+    Cela est désormais possible, grâce à notre technologie vous allez pouvoir voyager vers vos univers de fiction préférés et les parcourir de fond en comble.
+    Libre à vous de décider ce que vous souhaitez y faire, vous êtes totalement libre !
+    </p>
+</div>
+
+<div class="btn" id="btn">
+    <a onfocus="white()" href=# class="b2">White Theme</a>
+    <a onfocus="dark()" href=# class="b1">Dark Theme</a>
+</div>
+<footer class="foot" id="foote">
+    <div class="reseaux">
+        <img onclick="lien(1)" src="Ressources/facebook.png">
+        <img onclick="lien(2)" src="Ressources/twitter.png">
+        <img onclick="lien(3)" src="Ressources/linkedin.png">
+        <img onclick="lien(4)" src="Ressources/instagram.png">
+        <img onclick="lien(5)" src="Ressources/behance.png">
+    </div>
+    <div class="mentions">Tous droits réservés ©Agence Web, Rennes | 2021 / 2022 | François DAVID - Pier CHAPON - Bazile BIDET</div>
+</footer>
+<script src="Js/script.js"></script>
+</body >
+</html>
